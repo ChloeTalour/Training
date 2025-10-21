@@ -11,9 +11,8 @@ interface FieldErrors {
     phone?: string
 }
 
-export default function FormContent() {
+export default function FormContent({ step, setStep }: { step: number, setStep: React.Dispatch<React.SetStateAction<number>> }) {
     const [errors, setErrors] = useState<FieldErrors>({});
-    const [step, setStep] = useState<number>(1)
 
     const stepInfos = [
         {
