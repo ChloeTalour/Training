@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import SubmitButton from "./SubmitButton/submitButton";
 import { userFormSchema } from "@/lib/validations/userForm";
 import InfoStep from "./Steps/infoStep";
+import SelectPlanStep from "./Steps/selectPlanStep";
 
 interface FieldErrors {
     name?: string
@@ -25,7 +26,7 @@ export default function FormContent({ step, setStep }: { step: number, setStep: 
             step: 2,
             title: 'Select your plan',
             description: 'You have the option of monthly or yearly billing',
-            component: <p>STEP 2</p>
+            component: <SelectPlanStep />
         },
         {
             step: 3,
